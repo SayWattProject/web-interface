@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="{% block html_class %}{{html_class}}{% endblock %}" lang="en">
+  <head>
+    {% include 'bit/meta.html' %}
+    <title>
+      Say Watt - CE 186 Project
+    </title>
+    {% include 'bit/style.html' %}
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+    <div id="wrapper">
+    {% include 'bit/navbar.html' %}
+      <div id="page-wrapper">
+      {# include 'bit/announcement.html' #}
+      {# # include 'bit/notifications.html' #}
+      {% block content %}{% endblock %}
+      </div>
+    </div>
+    {%  include 'bit/footer.html' %}
+    {%  include 'bit/script.html' %}
+    {% block script %}{% endblock %}
+
+  </body>
+</html>
